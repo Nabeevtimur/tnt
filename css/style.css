@@ -5,9 +5,43 @@
     outline: none;
 }
 
+@font-face {
+	font-family: 'Museo Sans Cyrl 700';
+	src: url('../fonts/MuseoSansCyrl-700.eot');
+	src: local('MuseoSansCyrl-700'),
+		url('../fonts/?#iefix') format('embedded-opentype'),
+		url('../fonts/MuseoSansCyrl-700.woff') format('woff'),
+		url('../fonts/MuseoSansCyrl-700.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.eot');
+    src: local('Roboto Bold'), local('Roboto-Bold'),
+        url('../fonts/') format('embedded-opentype'),
+        url('../fonts/Roboto-Bold.woff') format('woff'),
+        url('../fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
 html, 
 body {
     font-size: 62.5%; 
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -15,45 +49,112 @@ body {
     margin: 0 auto;
 }
 .header {
-    padding-top: 6.4rem;
+    position: absolute;
     padding-bottom: 6.4rem;
+    left: 50%;
+    top: 6.4rem;
+    transform: translate(-50%, 0);
 }
 .header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.header_menu {
+.header__menu {
     display: flex;
     align-items: center;
 }
-.header_logo {
+.header__logo {
     width: 7.9rem;
     height: 2.8rem;
     margin-right: 3.9rem;
 }
-.header_nav a:not(:last-child) {
+.header__nav a:not(:last-child) {
     margin-right: 2.4rem;
 }
-.header_nav a {
+.header__nav a {
     color: #FFFFFF;
     text-decoration: none;
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 114%;
 }
-.header-socials-icon {
+.header__socials-icon {
     width: 1.7rem;
     height: 1.6rem;
 }
-.header-socials-icon:not(:last-child) {
+.header__socials-icon:not(:last-child) {
     margin-right: 2rem;
 
 }
-body {
-    background: url('../img/background.jpg');
-}
 
+.main {
+    padding-top: 18.7rem;
+    background: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+}
+.main__raiting-title {
+    font-size: 1.4rem;
+    line-height: 114%;
+    margin-bottom: 1.6rem;
+}
+.main__raiting-wrap {
+    display: flex;
+    align-items: center;
+}
+.main__raiting-stars {
+    display: flex;
+    align-items: center;
+    margin-right: .9rem;
+    
+}
+.main__raiting-number {
+    font-size: 1.2rem;
+    line-height: 117%;
+}
+.main__raiting-star {
+    width: 1.2rem;
+    height: 1.2rem;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+.main__raiting-star:not(:last-child) {
+    margin-right: .4rem;
+}
+.main__raiting  {
+    margin-bottom: 1rem;
+}
+.main__header   {
+    font-family: 'Museo Sans Cyrl 700';
+    font-size: 7.6rem;
+    line-height: 120%;
+}
+.main__description {
+    max-width: 52.8rem;
+    margin-bottom: 4.1rem;
+    font-size: 1.4rem;
+    line-height: 150%;
+}
+.main__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 24.5rem;
+    padding: 2.2rem 7.2rem;
+    margin-bottom: 8.8rem;
+    font-size: 1.4rem;
+    line-height: 114%;
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color: #151515;
+    border-radius: .8rem;
+}
 .footer {
     background: #030102;
-    color: #FFFFFF;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
@@ -65,20 +166,25 @@ body {
 
 }
 
-.footer_menu {
+.footer__menu {
     display: flex;
-    padding-left: 0;
-    color: #FFFFFF; 
+    padding-left: 0; 
 }
 
-.footer_menu li{
-    list-style: none
-    ;
-}
-.footer_menu li {
-    color:#FFFFFF;
+.footer__menu li{
+    list-style: none;
+    }
+.footer__menu li a {
+    color:#686767;  
     text-decoration: none;
+    font-size: 1.4rem;
+    line-height: 143%;
 }
-.footer_menu li:not(:last-child) {
+.footer__menu li:not(:last-child) {
     margin-right: 2.5rem;
+}
+.footer__copy {  
+font-size: 1.4rem;
+line-height: 143%;
+color:#686767; 
 }
